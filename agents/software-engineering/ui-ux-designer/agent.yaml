@@ -10,3 +10,8 @@ tools:
 - path: ../../../skills/engineering-practices/clean-code-reusability/SKILL.md
 - path: ../../../skills/roles/product-owner/SKILL.md
 - path: ../../../skills/security/grc-compliance/security-privacy/SKILL.md
+- path: ../../../skills/engineering-practices/round-workflow/SKILL.md
+- path: ../../../skills/engineering-practices/git-conventional-commits/SKILL.md
+- path: ../../../skills/engineering-practices/vcs-repository-management/SKILL.md
+- path: ../../../skills/programs/github-cli/SKILL.md
+- path: ../../../skills/programs/browser-use/SKILL.md

@@ -7,6 +7,11 @@
     "../../../skills/roles/frontend-developer/SKILL.md",
     "../../../skills/engineering-practices/clean-code-reusability/SKILL.md",
     "../../../skills/roles/product-owner/SKILL.md",
-    "../../../skills/security/grc-compliance/security-privacy/SKILL.md"
+    "../../../skills/security/grc-compliance/security-privacy/SKILL.md",
+    "../../../skills/engineering-practices/round-workflow/SKILL.md",
+    "../../../skills/engineering-practices/git-conventional-commits/SKILL.md",
+    "../../../skills/engineering-practices/vcs-repository-management/SKILL.md",
+    "../../../skills/programs/github-cli/SKILL.md",
+    "../../../skills/programs/browser-use/SKILL.md"
   ]
 }

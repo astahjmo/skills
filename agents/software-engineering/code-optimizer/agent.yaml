@@ -30,3 +30,7 @@ tools:
 - path: ../../../skills/languages/lang-rust/SKILL.md
 - path: ../../../skills/languages/lang-go/SKILL.md
 - path: ../../../skills/databases/data-intensive-systems/SKILL.md
+- path: ../../../skills/engineering-practices/round-workflow/SKILL.md
+- path: ../../../skills/engineering-practices/git-conventional-commits/SKILL.md
+- path: ../../../skills/engineering-practices/vcs-repository-management/SKILL.md
+- path: ../../../skills/programs/github-cli/SKILL.md

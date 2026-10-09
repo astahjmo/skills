@@ -7,6 +7,8 @@
     "../../../skills/engineering-practices/vcs-repository-management/SKILL.md",
     "../../../skills/engineering-practices/git-conventional-commits/SKILL.md",
     "../../../skills/engineering-practices/clean-code-reusability/SKILL.md",
-    "../../../skills/roles/devops-engineer/SKILL.md"
+    "../../../skills/roles/devops-engineer/SKILL.md",
+    "../../../skills/engineering-practices/round-workflow/SKILL.md",
+    "../../../skills/programs/github-cli/SKILL.md"
   ]
 }
