@@ -1,6 +1,6 @@
 # 📚 Catálogo Central de Habilidades e Agentes Especializados
 
-Este documento consolida o inventário canônico de todas as **191 Habilidades Especializadas (Skills)** e **56 Agentes Especializados Universais (Multi-Harness)** disponíveis neste repositório.
+Este documento consolida o inventário canônico de todas as **194 Habilidades Especializadas (Skills)** e **56 Agentes Especializados Universais (Multi-Harness)** disponíveis neste repositório.
 
 ---
 
@@ -11,7 +11,7 @@ Este documento consolida o inventário canônico de todas as **191 Habilidades E
 │                        ESTATÍSTICAS GERAIS DO ECOSSISTEMA                              │
 ├────────────────────────────────────────┬───────────────────────────────────────────────┤
 │ 🤖 Agentes Especializados Universais   │ 56                                            │
-│ 📚 Total de Skills de Produção         │ 191                                           │
+│ 📚 Total de Skills de Produção         │ 194                                           │
 │ 🎓 Domínios Acadêmicos & Engenharia    │ 34                                            │
 │ 🔒 Segurança da Informação & AppSec    │ 45                                            │
 │ 💻 Linguagens & Frameworks             │ 30                                            │
@@ -113,7 +113,7 @@ Este documento consolida o inventário canônico de todas as **191 Habilidades E
 
 ---
 
-## 📐 Práticas de Engenharia e Arquitetura (10)
+## 📐 Práticas de Engenharia e Arquitetura (11)
 
 | Skill | Caminho | Descrição |
 | :--- | :--- | :--- |
@@ -124,6 +124,7 @@ Este documento consolida o inventário canônico de todas as **191 Habilidades E
 | **git-conventional-commits** | [`skills/engineering-practices/git-conventional-commits/SKILL.md`](skills/engineering-practices/git-conventional-commits/SKILL.md) | Padroniza a elaboração de commits atômicos e histórico de controle de versão utilizando a especificação Conventional Commits v1.0.0 (feat, fix, refactor, perf, test, docs, breaking changes) com inspeção orientada a git diff. |
 | **latency-engineering** | [`skills/engineering-practices/latency-engineering/SKILL.md`](skills/engineering-practices/latency-engineering/SKILL.md) | Especialista em Engenharia de Latência e Otimização de Delay em Sistemas de Software baseado na obra Latency: Reduce delay in software systems (Pekka Enberg). Cobre as Leis da Latência (Little, Amdahl, Teoria de Filas), latência de cauda (tail latency p99/p99.9) e Coordinated Omission, arquiteturas low-latency (sharding, replicação, consistência, RPC), otimização de hardware (CPU, cache hierárquico, NUMA, kernel bypass) e eliminação de trabalho desnecessário (lazy loading, caching, batching, pré-computação). |
 | **python-performance-parallelism** | [`skills/engineering-practices/python-performance-parallelism/SKILL.md`](skills/engineering-practices/python-performance-parallelism/SKILL.md) | Especialista em Otimização, Alta Performance e Paralelismo em Python baseado nas obras High Performance Python 2nd Edition (Gorelick & Ozsvald), Fast Python (Tiago Antão) e Parallel and High Performance Programming with Python 2nd Edition (Fabio Nelli). Cobre profiling (cProfile, line_profiler, py-spy, scalene), otimização de CPU e memória, NumPy/pandas vetorizados, multiprocessing vs threads vs asyncio (GIL/free-threading), Cython/Numba, GPUs (CUDA/RAPIDS), Dask/Ray/PySpark e paralelismo distribuído em cloud/serverless. |
+| **round-workflow** | [`skills/engineering-practices/round-workflow/SKILL.md`](skills/engineering-practices/round-workflow/SKILL.md) | Pipeline de round (o pedido da sessão): triagem em feature/fix/patch/refactor/perf/test/docs/chore, tarefas no GitHub Projects com critérios de aceitação, dev com evidências (prints/logs/repro) e QA independente com veredito esperado×obtido. Use quando um pedido deve virar issue no board com validação de QA. |
 | **system-design-scalability** | [`skills/engineering-practices/system-design-scalability/SKILL.md`](skills/engineering-practices/system-design-scalability/SKILL.md) | Especialista em System Design, Engenharia de Sistemas em Larga Escala e Arquiteturas Distribuídas de Alta Disponibilidade. Cobre sharding, particionamento, replicação, consistência eventual (CAP/PACELC), caching distribuído, balanceamento de carga, rate limiting, circuit breakers e resiliência. |
 | **template-skill** | [`skills/engineering-practices/template-skill/SKILL.md`](skills/engineering-practices/template-skill/SKILL.md) | Um template básico que demonstra como estruturar uma habilidade (skill) personalizada para agentes de IA. |
 | **vcs-repository-management** | [`skills/engineering-practices/vcs-repository-management/SKILL.md`](skills/engineering-practices/vcs-repository-management/SKILL.md) | Especialista em Sistemas de Controle de Versão (VCS) e Gestão Avançada de Repositórios. Domina Git de baixo nível (DAG, objetos, reflog, worktrees, sparse-checkout, LFS, submodules, bisect, filter-repo), Subversion/SVN (arquitetura FSFS, trunk/branches/tags, svn:mergeinfo, svn:externals, svnadmin, hooks), Mercurial (Hg), estratégias de branching (Trunk-based, GitFlow), migração de repositórios legados para Git e escalabilidade de monorepos (Scalar). |
@@ -318,14 +319,16 @@ Este documento consolida o inventário canônico de todas as **191 Habilidades E
 
 ---
 
-## ⚙️ Programas, Ferramentas e Ecossistemas (15)
+## ⚙️ Programas, Ferramentas e Ecossistemas (17)
 
 | Skill | Caminho | Descrição |
 | :--- | :--- | :--- |
 | **antigravity-guide** | [`skills/programs/antigravity-guide/SKILL.md`](skills/programs/antigravity-guide/SKILL.md) | Guia Completo e Referência Canônica para Google Antigravity (AGY), cobrindo Antigravity CLI (agy), Antigravity 2.0 Desktop, IDE, Python SDK, slash commands, keybindings e o Sistema de Customizações (Skills, Rules, Plugins, Hooks, Sidecars e MCP Servers). Use esta skill quando for requisitado a explicar, configurar ou customizar o ecossistema Antigravity. |
+| **browser-use** | [`skills/programs/browser-use/SKILL.md`](skills/programs/browser-use/SKILL.md) | Browser controlado por agentes (Browser Use CLI 2.0, CDP): navegar, clicar, ler estado e tirar PRINTS em arquivo para evidências. Use quando a tarefa precisar de verificação visual/UI (frontend) ou reprodução em navegador. |
 | **program-containers** | [`skills/programs/containers/SKILL.md`](skills/programs/containers/SKILL.md) | Especialista em tecnologias e ecossistemas de containers (locais e cloud), dominando padrões OCI, Docker, Podman, CRI-O, Buildah, Kubernetes, registries seguros, hardening e orquestração gerenciada em nuvem. |
 | **gemini-enterprise** | [`skills/programs/gemini-enterprise/SKILL.md`](skills/programs/gemini-enterprise/SKILL.md) | Atua como especialista em Google Gemini Enterprise, cobrindo integração com Google Workspace, Gemini Code Assist Enterprise, Vertex AI Search & Agents, governança de dados, privacidade corporativa, extensões e customização. |
 | **program-github-actions** | [`skills/programs/github-actions/SKILL.md`](skills/programs/github-actions/SKILL.md) | Especialista na Plataforma GitHub, GitHub Actions e CI/CD. Cobre governança de repositórios, regras de proteção (Rulesets), CODEOWNERS, fluxos de Pull Request, automação com GitHub CLI (gh), segurança com GHAS (Dependabot, CodeQL, Secret Scanning), GitHub Packages (ghcr.io), GitHub Codespaces, e engenharia completa de workflows YAML (reusable workflows, composite actions, matrix strategies, concurrency, environments protegidos, autenticação OIDC e caching). |
+| **github-cli** | [`skills/programs/github-cli/SKILL.md`](skills/programs/github-cli/SKILL.md) | Use a CLI `gh` (GitHub CLI) para issues, boards do GitHub Projects, PRs, releases e API — incluindo evidências com anexos de imagem via `--attach`. Use quando precisar criar/consultar/classificar tarefas no board, abrir/comentar PR, anexar prints a uma issue ou automatizar o GitHub pelo terminal. |
 | **program-markmap** | [`skills/programs/markmap/SKILL.md`](skills/programs/markmap/SKILL.md) | Especialista em visualização de mapas mentais interativos a partir de Markdown utilizando Markmap (markmap-cli, markmap-lib, markmap-view, KaTeX, autoloader e exportação SVG/HTML). |
 | **program-moodle** | [`skills/programs/moodle/SKILL.md`](skills/programs/moodle/SKILL.md) | Atua como especialista sênior em Moodle LMS, cobrindo desenvolvimento e ciclo de vida de plugins (Frankenstyle), APIs principais (DB, Form, Page, Output), modelagem XMLDB e tuning de banco de dados, design de temas (Mustache/SCSS), infraestrutura em larga escala (OPcache, MUC Redis/Memcached) e segurança. |
 | **power-automate** | [`skills/programs/power-automate/SKILL.md`](skills/programs/power-automate/SKILL.md) | Atua como especialista em Microsoft Power Automate, cobrindo Cloud Flows (Automated, Instant, Scheduled), Desktop Flows (RPA), Process Mining, AI Builder, conectores personalizados e arquitetura de governança/DLP. |
