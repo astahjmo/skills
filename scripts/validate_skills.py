@@ -2,6 +2,13 @@ import os
 import re
 import json
 
+def strip_code(content):
+    """Remove fenced code blocks e spans de código inline antes de extrair
+    links, para que exemplos documentados (ex.: `![alt](./x.png)`) não sejam
+    tratados como links markdown reais."""
+    content = re.sub(r"```.*?```", "", content, flags=re.DOTALL)
+    return re.sub(r"`[^`\n]*`", "", content)
+
 def validate():
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     errors = []
@@ -84,7 +91,8 @@ def validate():
                         warnings.append(f"Arquivo .gitkeep ausente em '{sub_path}'.")
                         
                 # Validar links locais contidos no SKILL.md
-                links = link_regex.findall(content)
+                # (ignora code fences/spans: exemplos não são links reais)
+                links = link_regex.findall(strip_code(content))
                 for link in links:
                     if link.startswith(("http://", "https://", "mailto:", "git+")):
                         continue
@@ -167,7 +175,8 @@ def validate():
             try:
                 with open(other_file_path, "r", encoding="utf-8") as f:
                     content = f.read()
-                links = link_regex.findall(content)
+                # (ignora code fences/spans: exemplos não são links reais)
+                links = link_regex.findall(strip_code(content))
                 for link in links:
                     if link.startswith(("http://", "https://", "mailto:", "git+")):
                         continue
