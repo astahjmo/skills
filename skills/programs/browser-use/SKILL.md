@@ -302,6 +302,7 @@ When enabled, search `$BH_AGENT_WORKSPACE/domain-skills/<host>/` before inventin
 
 ## Uso no nosso fluxo (evidências)
 
-- Prints SEMPRE em arquivo (`browser-use screenshot saida.png`) e anexados com `gh --attach`.
+- Prints em arquivo: capture no modo Python do CLI (`browser-use <<'PY' … PY`, helpers pré-importados) seguindo a referência de screenshots do browser-harness
+  (https://github.com/browser-use/browser-harness/blob/main/interaction-skills/screenshots.md); anexe com `gh --attach`.
 - Para tarefas de UI: o dev prova o antes/depois; o QA reproduz e captura o estado.
 - Chrome-only (CDP); cloud opcional; sem captcha solving local.

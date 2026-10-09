@@ -370,7 +370,7 @@ browser-use state         # elementos clicáveis indexados [0], [1]...
 browser-use click <i>     # clique por índice
 browser-use input <i> "texto"
 browser-use type "texto"
-browser-use screenshot arquivo.png   # print em ARQUIVO (ver com ferramenta de leitura)
+# print em ARQUIVO: capture no modo Python do CLI (helpers pré-importados; ver interaction-skills/screenshots.md)
 browser-use close
 ```
 Modos: headless (default), `--headed`, `--profile "Default"` (Chrome real), `--connect` (Chrome aberto).
@@ -394,7 +394,8 @@ touch skills/programs/browser-use/{scripts,examples,resources,references}/.gitke
   echo
   echo '## Uso no nosso fluxo (evidências)'
   echo
-  echo '- Prints SEMPRE em arquivo (`browser-use screenshot saida.png`) e anexados com `gh --attach`.'
+  echo "- Prints em arquivo: capture no modo Python do CLI (\`browser-use <<'PY' … PY\`, helpers pré-importados) seguindo a referência de screenshots do browser-harness"
+  echo "  (https://github.com/browser-use/browser-harness/blob/main/interaction-skills/screenshots.md); anexe com \`gh --attach\`."
   echo '- Para tarefas de UI: o dev prova o antes/depois; o QA reproduz e captura o estado.'
   echo '- Chrome-only (CDP); cloud opcional; sem captcha solving local.'
 } > skills/programs/browser-use/SKILL.md
@@ -850,12 +851,14 @@ gh project item-list 3 --owner astahjmo --format json | head -c 400
 ```bash
 echo '<h1>rune round-workflow smoke ok</h1>' > /tmp/smoke.html
 (cd /tmp && python3 -m http.server 8099 &) ; sleep 1
-browser-use open http://127.0.0.1:8099/smoke.html
-browser-use screenshot /tmp/smoke.png
+browser-use <<'PY'
+new_tab("http://127.0.0.1:8099/smoke.html")
+capture_screenshot("/tmp/smoke.png")
+PY
 pkill -f "http.server 8099" || true
 cat > /tmp/evidencia.md <<'MD'
 ## ✅ Dev — smoke do pipeline
-**Execução:** servidor local + browser-use screenshot
+**Execução:** servidor local + captura via browser-use (modo Python)
 **Prints:** abaixo
 MD
 gh issue comment <N> --repo astahjmo/rune --body-file /tmp/evidencia.md --attach /tmp/smoke.png
