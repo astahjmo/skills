@@ -17,3 +17,6 @@ tools:
 - path: ../../../skills/roles/general/SKILL.md
 - path: ../../../skills/programs/antigravity-guide/SKILL.md
 - path: ../../../skills/engineering-practices/clean-code-reusability/SKILL.md
+- path: ../../../skills/engineering-practices/round-workflow/SKILL.md
+- path: ../../../skills/programs/github-cli/SKILL.md
+- path: ../../../skills/engineering-practices/git-conventional-commits/SKILL.md

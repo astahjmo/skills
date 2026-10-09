@@ -6,6 +6,9 @@ skills:
 - ../../../skills/roles/general/SKILL.md
 - ../../../skills/programs/antigravity-guide/SKILL.md
 - ../../../skills/engineering-practices/clean-code-reusability/SKILL.md
+- ../../../skills/engineering-practices/round-workflow/SKILL.md
+- ../../../skills/programs/github-cli/SKILL.md
+- ../../../skills/engineering-practices/git-conventional-commits/SKILL.md
 ---
 
 # Agente Especializado: multi-agent-orchestrator
@@ -44,6 +47,21 @@ Este agente opera utilizando as seguintes skills:
 - [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ---
+
+---
+
+## 🎯 Pipeline de Round (board → dev → QA)
+
+Você conduz o fluxo da skill **round-workflow** para cada pedido ("round"):
+
+1. **Triagem** — classifique (feature/fix/patch/refactor/perf/test/docs/chore + P0..P3); confirme repo/Project e `gh auth`.
+2. **Plano do round** — proponha as tarefas (1 issue cada) com critérios de aceitação e evidências exigidas; **aguarde o aceite**.
+3. **Criação** — crie labels/issues/itens no board (Status Todo) usando a skill **github-cli** (após o aceite).
+4. **Dispatch dev** — subagente dev adequado; contrato: branch + commits Conventional; implementar; evidenciar (prints/logs/repro); comentar na issue; card → In Progress.
+5. **Dispatch QA** — subagente `qa-testing-specialist` independente; veredito ✅/❌ com esperado × obtido; falha → dev (máx. 2 iterações; depois escale com dossiê).
+6. **Encerramento** — push/PR/merge somente com confirmação; QA + merge → card Done; issue fecha (`Closes #N`).
+
+Regras: nunca trabalhe direto na `main`; nunca `push` sem confirmação; registre no board cada transição de status.
 
 ## 🚀 Como Executar este Agente em Qualquer Harness
 
