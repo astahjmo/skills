@@ -96,3 +96,4 @@ gh api graphql -f query='query { viewer { login } }'
 - Criar/editar issues e itens de board **somente com confirmação** — política semiautomática do round-workflow (fora de um round aprovado; dentro dele valem os gates da skill **round-workflow**).
 - Nunca deletar issue, item, label ou branch remota sem confirmação explícita.
 - Prefira `--body-file` para corpos longos; markdown com referências locais + `--attach` para prints.
+- O **registro vive em issue/comentário/gist** — nunca em docs de tracking no disco; `gh gist create` cria gist **secreto** por padrão (bom para logs/relatórios longos).

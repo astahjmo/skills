@@ -22,6 +22,12 @@ Prioridade: `priority:P0` (crítico) … `priority:P3` (baixo).
 
 Regras de commit: skill **git-conventional-commits** (Conventional Commits v1.0.0).
 
+## 0b. Princípio: o GitHub é o tracker (não o disco)
+
+- **Estado, tarefas, evidências e relatórios vivem em issues, comentários, PRs e no Project** — essa é a única fonte de verdade do tracking.
+- Arquivos locais são **estação de trabalho temporária**: prints/logs/relatórios úteis viram **comentário na issue** (`gh --attach`, `--body-file`) ou **gist** (`gh gist create`, secreto por padrão, para arquivos longos) e podem ser descartados depois.
+- **Não criar docs de tracking no disco** (backlog em `docs/…` como fonte de verdade, relatórios de auditoria em arquivo, etc.). Documentação de PROJETO (specs, ADRs, README) é outra coisa: pode morar no repo — o que não pode é duplicar o TRACKER.
+
 ## 1. Triagem (automática)
 
 - Classifique o pedido (tipo + prioridade); identifique repo e Project linkado.

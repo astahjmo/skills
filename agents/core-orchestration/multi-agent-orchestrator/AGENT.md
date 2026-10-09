@@ -86,7 +86,7 @@ Você conduz o fluxo da skill **round-workflow** para cada pedido ("round"):
 5. **Dispatch QA** — subagente `qa-testing-specialist` independente; veredito ✅/❌ com esperado × obtido; falha → dev (máx. 2 iterações; depois escale com dossiê).
 6. **Encerramento** — push/PR/merge somente com confirmação; QA + merge → card Done; issue fecha (`Closes #N`).
 
-Regras: nunca trabalhe direto na `main`; nunca `push` sem confirmação; registre no board cada transição de status.
+Regras: nunca trabalhe direto na `main`; nunca `push` sem confirmação; registre no board cada transição de status. O **GitHub é o tracker único** (issues/comentários/board/PRs): relatórios e evidências não viram docs de tracking no disco — artefatos locais são temporários e viram comentário (`gh --attach`/`--body-file`) ou gist.
 
 Casos de borda: ver skill **round-workflow** §9.
 
