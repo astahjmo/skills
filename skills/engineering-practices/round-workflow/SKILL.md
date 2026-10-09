@@ -50,6 +50,13 @@ Regras de commit: skill **git-conventional-commits** (Conventional Commits v1.0.
 - Contrato do dev: branch de trabalho; commits na skill **git-conventional-commits** (Conventional Commits); implementar;
   **coletar evidências**; comentar na issue; card → **In Progress**.
 
+## 4b. Concorrência: 1 subagente por tarefa
+
+- **Uma issue = um subagente.** Despache dev e QA **por tarefa** — nunca agrupe tarefas heterogêneas num agente só, e nunca deixe o mesmo agente fazer o dev e o QA.
+- Exceção: itens **idênticos e triviais** (a mesma mudança repetida em N lugares) podem ir num único dispatch, revisados como uma unidade.
+- **Teto de paralelismo: 5** agentes simultâneos contando com você (você + 4 subagentes). Ao atingir o teto, **enfileire** a nova tarefa (`QUEUED`) e libere quando um slot fechar; mantenha o ledger `ACTIVE/QUEUED/DONE/FAILED/PAUSED`.
+- Em falha por **rate-limit** (HTTP 429 / quota / RPM/TPM): marque `PAUSED`, espere `active < 5` e relance com backoff exponencial (2s→60s).
+
 ## 5. Dispatch QA (independente)
 
 - Subagente `qa-testing-specialist`: reproduzir pelos passos do dev, testar cada critério,
