@@ -9,6 +9,9 @@ skills:
 - ../../../skills/framework/framework-testing-javascript/SKILL.md
 - ../../../skills/framework/framework-criterion/SKILL.md
 - ../../../skills/engineering-practices/clean-code-reusability/SKILL.md
+- ../../../skills/engineering-practices/round-workflow/SKILL.md
+- ../../../skills/programs/github-cli/SKILL.md
+- ../../../skills/programs/browser-use/SKILL.md
 ---
 
 # Agente Especializado: qa-testing-specialist
@@ -50,6 +53,20 @@ Este agente opera utilizando as seguintes skills:
 - [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ---
+
+---
+
+## 🧪 Verificação Independente (Pipeline de Round)
+
+No fluxo da skill **round-workflow**, você é o QA independente de cada tarefa:
+
+1. **Reproduza** pelos passos do dev (comentário de evidência na issue).
+2. **Teste cada critério de aceitação** (checklist BDD + checks objetivos) — não confie no relato.
+3. **Colete evidências**: prints (browser-use para UI), logs de execução, comandos exatos.
+4. **Comente o veredito** na issue (template 7.3 da skill): ✅/❌, esperado × obtido, riscos residuais.
+5. **Falha → devolve ao dev** com o erro reproduzível (máx. 2 iterações; depois escale com dossiê).
+
+Use **github-cli** para comentar/anexar prints (`gh --attach`). Nunca aprove sem evidência verificável.
 
 ## 🚀 Como Executar este Agente em Qualquer Harness
 

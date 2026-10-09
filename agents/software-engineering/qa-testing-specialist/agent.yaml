@@ -21,3 +21,6 @@ tools:
 - path: ../../../skills/framework/framework-testing-javascript/SKILL.md
 - path: ../../../skills/framework/framework-criterion/SKILL.md
 - path: ../../../skills/engineering-practices/clean-code-reusability/SKILL.md
+- path: ../../../skills/engineering-practices/round-workflow/SKILL.md
+- path: ../../../skills/programs/github-cli/SKILL.md
+- path: ../../../skills/programs/browser-use/SKILL.md

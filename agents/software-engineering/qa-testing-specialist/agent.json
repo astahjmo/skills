@@ -9,6 +9,9 @@
     "../../../skills/framework/framework-testing-python/SKILL.md",
     "../../../skills/framework/framework-testing-javascript/SKILL.md",
     "../../../skills/framework/framework-criterion/SKILL.md",
-    "../../../skills/engineering-practices/clean-code-reusability/SKILL.md"
+    "../../../skills/engineering-practices/clean-code-reusability/SKILL.md",
+    "../../../skills/engineering-practices/round-workflow/SKILL.md",
+    "../../../skills/programs/github-cli/SKILL.md",
+    "../../../skills/programs/browser-use/SKILL.md"
   ]
 }
