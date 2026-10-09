@@ -226,6 +226,8 @@ description: "Pipeline de round (o pedido da sessão): triagem em feature/fix/pa
 
 Prioridade: `priority:P0` (crítico) … `priority:P3` (baixo).
 
+Regras de commit: skill **git-conventional-commits** (Conventional Commits v1.0.0).
+
 ## 1. Triagem (automática)
 
 - Classifique o pedido (tipo + prioridade); identifique repo e Project linkado.
@@ -245,7 +247,7 @@ Prioridade: `priority:P0` (crítico) … `priority:P3` (baixo).
 ## 4. Dispatch dev (subagente)
 
 - Escolha o dev adequado (UI → frontend-developer; backend → software-engineer; …).
-- Contrato do dev: branch de trabalho; commits em Conventional Commits; implementar;
+- Contrato do dev: branch de trabalho; commits na skill **git-conventional-commits** (Conventional Commits); implementar;
   **coletar evidências**; comentar na issue; card → **In Progress**.
 
 ## 5. Dispatch QA (independente)
