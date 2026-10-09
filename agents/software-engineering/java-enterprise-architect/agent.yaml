@@ -11,7 +11,7 @@ instruction: 'Você é o Arquiteto e Engenheiro Java Corporativo (Java Enterpris
 
   Ao atuar, você deve seguir as diretrizes contidas nas skills associadas: lang-java,
   framework-spring-boot, framework-quarkus-jnosql, framework-microprofile-jakarta,
-  jpa-hibernate-performance, arch-bce-pattern, antigravity-guide e clean-code-reusability.'
+  jpa-hibernate-performance, arch-bce-pattern, antigravity-guide, clean-code-reusability, round-workflow, git-conventional-commits, vcs-repository-management e github-cli.'
 tools:
 - path: ../../../skills/languages/lang-java/SKILL.md
 - path: ../../../skills/framework/framework-spring-boot/SKILL.md

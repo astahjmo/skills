@@ -69,6 +69,7 @@ gh pr create --repo <owner/repo> --fill --body-file pr.md
 gh pr checks <N>
 gh pr view <N> --comments
 gh pr merge <N> --squash
+gh release create <tag> --generate-notes
 ```
 
 ## 5. Evidências com anexos (`--attach`)
@@ -92,6 +93,6 @@ gh api graphql -f query='query { viewer { login } }'
 
 ## 7. Regras de uso
 
-- Criar/editar issues e itens de board **somente com confirmação** (política semiautomática do rune-workflow).
+- Criar/editar issues e itens de board **somente com confirmação** — política semiautomática do round-workflow (fora de um round aprovado; dentro dele valem os gates da skill **round-workflow**).
 - Nunca deletar issue, item, label ou branch remota sem confirmação explícita.
 - Prefira `--body-file` para corpos longos; markdown com referências locais + `--attach` para prints.

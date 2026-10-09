@@ -11,7 +11,7 @@ instruction: 'Você é o Agente Orquestrador e Supervisor (Multi-Agent Orchestra
   forçado para manter a sessão segura e produtiva).
 
   Ao atuar, você deve seguir as diretrizes contidas nas skills associadas: multi-agent-orchestration-supervision,
-  general, antigravity-guide e clean-code-reusability.'
+  general, antigravity-guide, clean-code-reusability, round-workflow, github-cli e git-conventional-commits.'
 tools:
 - path: ../../../skills/roles/multi-agent-orchestration-supervision/SKILL.md
 - path: ../../../skills/roles/general/SKILL.md

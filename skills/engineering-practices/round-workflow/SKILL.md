@@ -109,3 +109,10 @@ gh issue comment <N> --repo <owner/repo> --body-file evidencia.md \
 | Criar issues + itens no board | | ✓ (aceite do plano) |
 | Comentários de evidência e movimento de card | ✓ (dentro do round) | |
 | `push` / PR / merge | | ✓ |
+
+## 9. Casos de borda
+
+- Sem remote GitHub → parar na triagem e pedir para criar/conectar o repositório (já coberto na §1).
+- Round sem código (docs/chore) → evidência = diff + execução do que der (ex.: lint).
+- QA não consegue reproduzir → registrar no veredito e escalar com o passo exato que faltou.
+- Bug encontrado pelo dev fora do escopo → propor issue nova (não expandir o round).

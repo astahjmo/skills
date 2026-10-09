@@ -7,7 +7,7 @@ Este repositório serve como uma central modular e extensível para carregamento
 ## 🧭 Navegação Rápida
 
 > 📚 **[Acesse o Catálogo Completo de Habilidades e Agentes (CATALOGO.md)](CATALOGO.md)**  
-> Consulte a lista detalhada das **191 Skills** e **56 Agentes Especializados**, com métricas por categoria, subcategorias e descrições técnicas completas.
+> Consulte a lista detalhada das **194 Skills** e **56 Agentes Especializados**, com métricas por categoria, subcategorias e descrições técnicas completas.
 
 - 🤖 **[Guia de Agentes Especializados Universais (agents/README.md)](agents/README.md)**: Personas, manifestos (`AGENT.md`, `agent.yaml`, `agent.json`) e instruções de execução para qualquer harness.
 - 📜 **[Regras Globais do Projeto (AGENTS.md)](AGENTS.md)**: Diretrizes de comportamento, Clean Code, padrões de skills e criação de agentes.
@@ -18,21 +18,21 @@ Este repositório serve como uma central modular e extensível para carregamento
 ## 📁 Estrutura de Pastas
 
 ```text
-├── CATALOGO.md             # Catálogo mestre com inventário de todas as 191 skills e 56 agentes
+├── CATALOGO.md             # Catálogo mestre com inventário de todas as 194 skills e 56 agentes
 ├── README.md               # Visão geral e documentação do repositório
 ├── AGENTS.md               # Regras gerais de comportamento, clean code e workflows
 ├── skills.json             # Manifesto de carregamento e herança de skills
 ├── skills/
 │   ├── cloud-infra/        # AWS, Azure, Cloudflare, GCP, OCI, Linux Kernel, HPC, Zero Trust (8 skills)
-│   ├── databases/          # PostgreSQL, MariaDB, MongoDB, SQLite, Data Mesh, Streaming (6 skills)
+│   ├── databases/          # PostgreSQL, MariaDB, MongoDB, SQLite, Data Mesh, Streaming (8 skills)
 │   ├── domains/            # Matemática, Física, Computação Teórica, Circuitos, Robótica/Controle, Telecom, Química/CFD, SEP, Biotecnologia, WebAssembly (34 skills)
-│   ├── engineering-practices/ # Clean Code, C4 Model, Docs Anti-IA, Latência, Git VCS (10 skills)
-│   ├── framework/          # Spring Boot, Quarkus, MicroProfile, React, Vue, APIs REST, GraphQL, gRPC, SOAP, Testes de Mutação (15 skills)
-│   ├── languages/          # Java Moderno, Python, TypeScript, Go, Rust, C, C++, Assembly, Typst, LaTeX, Bash, etc. (15 skills)
+│   ├── engineering-practices/ # Clean Code, C4 Model, Docs Anti-IA, Latência, Git VCS (11 skills)
+│   ├── framework/          # Spring Boot, Quarkus, MicroProfile, React, Vue, APIs REST, GraphQL, gRPC, SOAP, Testes de Mutação (14 skills)
+│   ├── languages/          # Java Moderno, Python, TypeScript, Go, Rust, C, C++, Assembly, Typst, LaTeX, Bash, etc. (16 skills)
 │   ├── linguistics/        # Revisão editorial humana e desambiguação em PT-BR, EN-US e ES-LATAM (3 skills)
 │   ├── mapping/            # Código AST, Call Graphs, Rede, eBPF, CMDB, Engenharia Reversa (13 skills)
 │   ├── patterns/           # Design Patterns GoF e Boundary-Control-Entity BCE (4 skills)
-│   ├── programs/           # Containers, GitHub Actions, Antigravity Guide, Markmap, Moodle, WinDbg, DAST, IAST, SAST (15 skills)
+│   ├── programs/           # Containers, GitHub Actions, Antigravity Guide, Markmap, Moodle, WinDbg, DAST, IAST, SAST (17 skills)
 │   ├── roles/              # Architect, Orchestrator, Career Hunter, Web/Code Researcher, DevOps, DBA, QA, PO, UX (21 skills)
 └── agents/                 # 56 Agentes Especializados Universais em 7 Categorias
     ├── core-orchestration/     # Orquestração, supervisão, general e autodelegação (4 agentes)
@@ -75,4 +75,4 @@ O arquivo [skills.json](skills.json) permite registrar fontes externas de skills
 
 ---
 
-Para consultar o inventário detalhado de todas as 187 skills e 53 agentes, acesse o **[Catálogo Completo (CATALOGO.md)](CATALOGO.md)**.
+Para consultar o inventário detalhado de todas as 194 skills e 56 agentes, acesse o **[Catálogo Completo (CATALOGO.md)](CATALOGO.md)**.

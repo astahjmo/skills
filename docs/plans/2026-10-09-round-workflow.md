@@ -152,7 +152,7 @@ gh api graphql -f query='query { viewer { login } }'
 
 ## 7. Regras de uso
 
-- Criar/editar issues e itens de board **somente com confirmação** (política semiautomática do rune-workflow).
+- Criar/editar issues e itens de board **somente com confirmação** — política semiautomática do round-workflow (fora de um round aprovado; dentro dele valem os gates da skill **round-workflow**).
 - Nunca deletar issue, item, label ou branch remota sem confirmação explícita.
 - Prefira `--body-file` para corpos longos; markdown com referências locais + `--attach` para prints.
 ````
@@ -375,7 +375,7 @@ capture_screenshot("/tmp/saida.png") # print em ARQUIVO
 PY
 ```
 
-Modos: headless por padrão; use `browser-use --doctor` para diagnóstico e `browser-use skill` para a referência.
+Modos: por padrão anexa ao Chrome visível (attached); headless via `BU_CDP_URL`; use `browser-use --doctor` para diagnóstico e `browser-use skill` para a referência.
 ```
 
 - [ ] **Step 2: Montar o SKILL.md final (oficial/fallback + uso no fluxo)**
@@ -407,7 +407,7 @@ head -12 skills/programs/browser-use/SKILL.md
 - [ ] **Step 3: Instalar o CLI e validar**
 
 ```bash
-curl -fsSL https://browser-use.com/cli/install.sh | bash
+uv tool install --python 3.12 browser-use
 export PATH="$HOME/.local/bin:$PATH"
 command -v browser-use && browser-use --help | head -5
 ```
@@ -530,8 +530,6 @@ md=open(f'{base}/AGENT.md').read()
 assert '## 🚀 Como Executar' in md, "anchor do corpo"
 if '## 🎯 Pipeline de Round' not in md:
     sec = """
----
-
 ## 🎯 Pipeline de Round (board → dev → QA)
 
 Você conduz o fluxo da skill **round-workflow** para cada pedido ("round"):
@@ -545,8 +543,10 @@ Você conduz o fluxo da skill **round-workflow** para cada pedido ("round"):
 
 Regras: nunca trabalhe direto na `main`; nunca `push` sem confirmação; registre no board cada transição de status.
 
+Casos de borda: ver skill **round-workflow** §9.
+
 """
-    md=md.replace('## 🚀 Como Executar', sec.lstrip('\n')+'## 🚀 Como Executar',1)
+    md=md.replace('## 🚀 Como Executar', sec.lstrip('\n')+'---\n\n## 🚀 Como Executar',1)
 # frontmatter skills
 m=re.match(r'^---\n(.*?\n)---\n', md, re.S)
 fm=m.group(1)
@@ -622,8 +622,6 @@ md=open(f'{base}/AGENT.md').read()
 assert '## 🚀 Como Executar' in md
 if '## 🧪 Verificação Independente (Pipeline de Round)' not in md:
     sec = """
----
-
 ## 🧪 Verificação Independente (Pipeline de Round)
 
 No fluxo da skill **round-workflow**, você é o QA independente de cada tarefa:
@@ -637,7 +635,7 @@ No fluxo da skill **round-workflow**, você é o QA independente de cada tarefa:
 Use **github-cli** para comentar/anexar prints (`gh --attach`). Nunca aprove sem evidência verificável.
 
 """
-    md=md.replace('## 🚀 Como Executar', sec.lstrip('\n')+'## 🚀 Como Executar',1)
+    md=md.replace('## 🚀 Como Executar', sec.lstrip('\n')+'---\n\n## 🚀 Como Executar',1)
 m=re.match(r'^---\n(.*?\n)---\n', md, re.S); fm=m.group(1)
 for s in SKILLS:
     if f'- {s}' not in fm: fm=fm.rstrip('\n')+f'\n- {s}\n'
@@ -688,15 +686,13 @@ COMMON=['../../../skills/engineering-practices/round-workflow/SKILL.md',
         '../../../skills/programs/github-cli/SKILL.md']
 BROWSER='../../../skills/programs/browser-use/SKILL.md'
 BLOCK="""
----
-
 ## 🔀 Fluxo Git & GitHub (Semiautomático)
 
 Siga a skill **round-workflow** (triagem, tarefas no board com critérios de aceitação, evidências, QA independente). Regras:
 
 - **Automático:** `git status` antes de tudo; branch de trabalho (nunca na `main`); commits atômicos em **Conventional Commits** ao concluir cada etapa; nunca `--force`/reset destrutivo; nunca commitar segredos ou mudanças fora do escopo.
-- **Com confirmação:** `push`, `gh pr create/merge`, criação/edição de issues e itens no GitHub Projects.
-- **Evidência obrigatória:** ao concluir a tarefa, poste o comentário de evidência na issue (prints via Browser Use + `gh --attach`, logs de execução, passos de reprodução) — prove que fez.
+- **Com confirmação:** `push`, `gh pr create/merge`, criação/edição de issues e itens no GitHub Projects (fora de um round aprovado; dentro dele valem os gates da skill **round-workflow**).
+- **Evidência obrigatória:** ao concluir a tarefa, poste o comentário de evidência na issue (prints via Browser Use **quando a tarefa for de UI** + `gh --attach`, logs de execução, passos de reprodução) — prove que fez.
 
 """
 for name, ui in AGENTS.items():
@@ -704,7 +700,7 @@ for name, ui in AGENTS.items():
     md=open(f'{d}/AGENT.md').read()
     assert '## 🚀 Como Executar' in md, f'{name}: anchor'
     if 'Fluxo Git & GitHub (Semiautomático)' not in md:
-        md=md.replace('## 🚀 Como Executar', BLOCK.lstrip('\n')+'## 🚀 Como Executar',1)
+        md=md.replace('## 🚀 Como Executar', BLOCK.lstrip('\n')+'---\n\n## 🚀 Como Executar',1)
     skills=COMMON+([BROWSER] if ui else [])
     m=re.match(r'^---\n(.*?\n)---\n', md, re.S); fm=m.group(1)
     for s in skills:
@@ -764,15 +760,13 @@ COMMON=['../../../skills/engineering-practices/round-workflow/SKILL.md',
         '../../../skills/programs/github-cli/SKILL.md']
 BROWSER='../../../skills/programs/browser-use/SKILL.md'
 BLOCK = """
----
-
 ## 🔀 Fluxo Git & GitHub (Semiautomático)
 
 Siga a skill **round-workflow** (triagem, tarefas no board com critérios de aceitação, evidências, QA independente). Regras:
 
 - **Automático:** `git status` antes de tudo; branch de trabalho (nunca na `main`); commits atômicos em **Conventional Commits** ao concluir cada etapa; nunca `--force`/reset destrutivo; nunca commitar segredos ou mudanças fora do escopo.
-- **Com confirmação:** `push`, `gh pr create/merge`, criação/edição de issues e itens no GitHub Projects.
-- **Evidência obrigatória:** ao concluir a tarefa, poste o comentário de evidência na issue (prints via Browser Use + `gh --attach`, logs de execução, passos de reprodução) — prove que fez.
+- **Com confirmação:** `push`, `gh pr create/merge`, criação/edição de issues e itens no GitHub Projects (fora de um round aprovado; dentro dele valem os gates da skill **round-workflow**).
+- **Evidência obrigatória:** ao concluir a tarefa, poste o comentário de evidência na issue (prints via Browser Use **quando a tarefa for de UI** + `gh --attach`, logs de execução, passos de reprodução) — prove que fez.
 
 """
 for name, ui in AGENTS.items():
@@ -780,7 +774,7 @@ for name, ui in AGENTS.items():
     md=open(f'{d}/AGENT.md').read()
     assert '## 🚀 Como Executar' in md, f'{name}: anchor'
     if 'Fluxo Git & GitHub (Semiautomático)' not in md:
-        md=md.replace('## 🚀 Como Executar', BLOCK.lstrip('\n')+'## 🚀 Como Executar',1)
+        md=md.replace('## 🚀 Como Executar', BLOCK.lstrip('\n')+'---\n\n## 🚀 Como Executar',1)
     skills=COMMON+([BROWSER] if ui else [])
     m=re.match(r'^---\n(.*?\n)---\n', md, re.S); fm=m.group(1)
     for s in skills:
@@ -852,12 +846,12 @@ gh project item-list 3 --owner astahjmo --format json | head -c 400
 
 ```bash
 echo '<h1>rune round-workflow smoke ok</h1>' > /tmp/smoke.html
-(cd /tmp && python3 -m http.server 8099 &) ; sleep 1
+(cd /tmp && python3 -m http.server 8099 & echo $! > /tmp/http8099.pid) ; sleep 1
 browser-use <<'PY'
 new_tab("http://127.0.0.1:8099/smoke.html")
 capture_screenshot("/tmp/smoke.png")
 PY
-pkill -f "http.server 8099" || true
+kill "$(cat /tmp/http8099.pid)" 2>/dev/null || true
 cat > /tmp/evidencia.md <<'MD'
 ## ✅ Dev — smoke do pipeline
 **Execução:** servidor local + captura via browser-use (modo Python)
@@ -875,7 +869,7 @@ import json,sys
 d=json.load(sys.stdin)
 f=[x for x in d['fields'] if x['name']=='Status'][0]
 print(f['id'] if '$1'=='field' else [o['id'] for o in f['options'] if o['name']=='$1'][0])"; }
-FIELD=$(get field); OPT=$(get In Progress)
+FIELD=$(get field); OPT=$(get "In Progress")
 ITEM=$(gh project item-list 3 --owner astahjmo --format json | python3 -c "
 import json,sys
 d=json.load(sys.stdin)

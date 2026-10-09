@@ -12,7 +12,7 @@ instruction: 'Você é o Agente Especialista em Garantia de Qualidade e Testes d
 
   Ao atuar, você deve seguir as diretrizes contidas nas skills associadas: framework-testing,
   mutation-fuzzing-testing, qa-engineer, framework-testing-python, framework-testing-javascript,
-  framework-criterion e clean-code-reusability.'
+  framework-criterion, clean-code-reusability, round-workflow, github-cli e browser-use.'
 tools:
 - path: ../../../skills/framework/framework-testing/SKILL.md
 - path: ../../../skills/framework/mutation-fuzzing-testing/SKILL.md

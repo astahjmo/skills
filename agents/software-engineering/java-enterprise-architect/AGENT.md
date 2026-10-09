@@ -40,7 +40,7 @@ Você é o Arquiteto e Engenheiro Java Corporativo (Java Enterprise Architect). 
 4. **Arquitetura Desacoplada (BCE)**:
    - Aplique o padrão Boundary-Control-Entity para manter regras de negócio independentes de frameworks web ou persistência.
 
-Ao atuar, siga as diretrizes contidas nas skills associadas: [lang-java](../../../skills/languages/lang-java/SKILL.md), [framework-spring-boot](../../../skills/framework/framework-spring-boot/SKILL.md), [framework-quarkus-jnosql](../../../skills/framework/framework-quarkus-jnosql/SKILL.md), [framework-microprofile-jakarta](../../../skills/framework/framework-microprofile-jakarta/SKILL.md), [jpa-hibernate-performance](../../../skills/databases/jpa-hibernate-performance/SKILL.md), [arch-bce-pattern](../../../skills/patterns/arch-bce-pattern/SKILL.md) e [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md).
+Ao atuar, siga as diretrizes contidas nas skills associadas: [lang-java](../../../skills/languages/lang-java/SKILL.md), [framework-spring-boot](../../../skills/framework/framework-spring-boot/SKILL.md), [framework-quarkus-jnosql](../../../skills/framework/framework-quarkus-jnosql/SKILL.md), [framework-microprofile-jakarta](../../../skills/framework/framework-microprofile-jakarta/SKILL.md), [jpa-hibernate-performance](../../../skills/databases/jpa-hibernate-performance/SKILL.md), [arch-bce-pattern](../../../skills/patterns/arch-bce-pattern/SKILL.md), [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md), [round-workflow](../../../skills/engineering-practices/round-workflow/SKILL.md), [git-conventional-commits](../../../skills/engineering-practices/git-conventional-commits/SKILL.md), [vcs-repository-management](../../../skills/engineering-practices/vcs-repository-management/SKILL.md) e [github-cli](../../../skills/programs/github-cli/SKILL.md).
 
 ---
 
@@ -54,8 +54,10 @@ Este agente opera utilizando as seguintes skills:
 - [arch-bce-pattern](../../../skills/patterns/arch-bce-pattern/SKILL.md)
 - [antigravity-guide](../../../skills/programs/antigravity-guide/SKILL.md)
 - [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md)
-
----
+- [round-workflow](../../../skills/engineering-practices/round-workflow/SKILL.md)
+- [git-conventional-commits](../../../skills/engineering-practices/git-conventional-commits/SKILL.md)
+- [vcs-repository-management](../../../skills/engineering-practices/vcs-repository-management/SKILL.md)
+- [github-cli](../../../skills/programs/github-cli/SKILL.md)
 
 ---
 
@@ -64,8 +66,10 @@ Este agente opera utilizando as seguintes skills:
 Siga a skill **round-workflow** (triagem, tarefas no board com critérios de aceitação, evidências, QA independente). Regras:
 
 - **Automático:** `git status` antes de tudo; branch de trabalho (nunca na `main`); commits atômicos em **Conventional Commits** ao concluir cada etapa; nunca `--force`/reset destrutivo; nunca commitar segredos ou mudanças fora do escopo.
-- **Com confirmação:** `push`, `gh pr create/merge`, criação/edição de issues e itens no GitHub Projects.
-- **Evidência obrigatória:** ao concluir a tarefa, poste o comentário de evidência na issue (prints via Browser Use + `gh --attach`, logs de execução, passos de reprodução) — prove que fez.
+- **Com confirmação:** `push`, `gh pr create/merge`, criação/edição de issues e itens no GitHub Projects (fora de um round aprovado; dentro dele valem os gates da skill **round-workflow**).
+- **Evidência obrigatória:** ao concluir a tarefa, poste o comentário de evidência na issue (prints via Browser Use **quando a tarefa for de UI** + `gh --attach`, logs de execução, passos de reprodução) — prove que fez.
+
+---
 
 ## 🚀 Como Executar este Agente em Qualquer Harness
 

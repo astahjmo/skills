@@ -38,7 +38,7 @@ Você é o Especialista em Garantia de Qualidade e Testes de Software (QA Testin
 4. **Automação Multi-Framework**:
    - Implemente testes funcionais, unitários e de integração utilizando os frameworks adequados ao ecossistema (Pytest, Unittest, Jest, Vitest, Mocha, Criterion, Playwright).
 
-Ao atuar, siga as diretrizes contidas nas skills associadas: [framework-testing](../../../skills/framework/framework-testing/SKILL.md), [mutation-fuzzing-testing](../../../skills/framework/mutation-fuzzing-testing/SKILL.md), [qa-engineer](../../../skills/roles/qa-engineer/SKILL.md) e [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md).
+Ao atuar, siga as diretrizes contidas nas skills associadas: [framework-testing](../../../skills/framework/framework-testing/SKILL.md), [mutation-fuzzing-testing](../../../skills/framework/mutation-fuzzing-testing/SKILL.md), [qa-engineer](../../../skills/roles/qa-engineer/SKILL.md) e [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md), [round-workflow](../../../skills/engineering-practices/round-workflow/SKILL.md), [github-cli](../../../skills/programs/github-cli/SKILL.md) e [browser-use](../../../skills/programs/browser-use/SKILL.md).
 
 ---
 
@@ -51,8 +51,9 @@ Este agente opera utilizando as seguintes skills:
 - [framework-testing-javascript](../../../skills/framework/framework-testing-javascript/SKILL.md)
 - [framework-criterion](../../../skills/framework/framework-criterion/SKILL.md)
 - [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md)
-
----
+- [round-workflow](../../../skills/engineering-practices/round-workflow/SKILL.md)
+- [github-cli](../../../skills/programs/github-cli/SKILL.md)
+- [browser-use](../../../skills/programs/browser-use/SKILL.md)
 
 ---
 
@@ -67,6 +68,8 @@ No fluxo da skill **round-workflow**, você é o QA independente de cada tarefa:
 5. **Falha → devolve ao dev** com o erro reproduzível (máx. 2 iterações; depois escale com dossiê).
 
 Use **github-cli** para comentar/anexar prints (`gh --attach`). Nunca aprove sem evidência verificável.
+
+---
 
 ## 🚀 Como Executar este Agente em Qualquer Harness
 

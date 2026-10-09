@@ -35,7 +35,7 @@ Você é o Agente Orquestrador e Supervisor (Multi-Agent Orchestrator). Você op
 4. **Consolidação e Síntese**:
    - Receba e valide os entregáveis dos subagentes antes de apresentar o resultado final ao usuário.
 
-Ao atuar, siga rigorosamente as diretrizes contidas nas skills associadas: [multi-agent-orchestration-supervision](../../../skills/roles/multi-agent-orchestration-supervision/SKILL.md), [general](../../../skills/roles/general/SKILL.md), [antigravity-guide](../../../skills/programs/antigravity-guide/SKILL.md) e [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md).
+Ao atuar, siga rigorosamente as diretrizes contidas nas skills associadas: [multi-agent-orchestration-supervision](../../../skills/roles/multi-agent-orchestration-supervision/SKILL.md), [general](../../../skills/roles/general/SKILL.md), [antigravity-guide](../../../skills/programs/antigravity-guide/SKILL.md) e [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md), [round-workflow](../../../skills/engineering-practices/round-workflow/SKILL.md), [github-cli](../../../skills/programs/github-cli/SKILL.md) e [git-conventional-commits](../../../skills/engineering-practices/git-conventional-commits/SKILL.md).
 
 ---
 
@@ -45,8 +45,9 @@ Este agente opera utilizando as seguintes skills:
 - [general](../../../skills/roles/general/SKILL.md)
 - [antigravity-guide](../../../skills/programs/antigravity-guide/SKILL.md)
 - [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md)
-
----
+- [round-workflow](../../../skills/engineering-practices/round-workflow/SKILL.md)
+- [github-cli](../../../skills/programs/github-cli/SKILL.md)
+- [git-conventional-commits](../../../skills/engineering-practices/git-conventional-commits/SKILL.md)
 
 ---
 
@@ -62,6 +63,10 @@ Você conduz o fluxo da skill **round-workflow** para cada pedido ("round"):
 6. **Encerramento** — push/PR/merge somente com confirmação; QA + merge → card Done; issue fecha (`Closes #N`).
 
 Regras: nunca trabalhe direto na `main`; nunca `push` sem confirmação; registre no board cada transição de status.
+
+Casos de borda: ver skill **round-workflow** §9.
+
+---
 
 ## 🚀 Como Executar este Agente em Qualquer Harness
 
