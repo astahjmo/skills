@@ -364,16 +364,18 @@ Se o download falhar, use este conteúdo mínimo no Step 2:
 
 ```markdown
 # browser-use — browser para agentes de código
+
 ```bash
-browser-use open <url>    # abre/atualiza a página
-browser-use state         # elementos clicáveis indexados [0], [1]...
-browser-use click <i>     # clique por índice
-browser-use input <i> "texto"
-browser-use type "texto"
-# print em ARQUIVO: capture no modo Python do CLI (helpers pré-importados; ver interaction-skills/screenshots.md)
-browser-use close
+browser-use <<'PY'
+new_tab("https://example.com")       # abre/navega
+print(page_info())                   # estado (elementos clicáveis etc.)
+click_at_xy(x, y)                    # clique por coordenada
+type_text("texto")                   # digitação
+capture_screenshot("/tmp/saida.png") # print em ARQUIVO
+PY
 ```
-Modos: headless (default), `--headed`, `--profile "Default"` (Chrome real), `--connect` (Chrome aberto).
+
+Modos: headless por padrão; use `browser-use --doctor` para diagnóstico e `browser-use skill` para a referência.
 ```
 
 - [ ] **Step 2: Montar o SKILL.md final (oficial/fallback + uso no fluxo)**
