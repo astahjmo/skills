@@ -17,6 +17,10 @@
     "../../../skills/languages/lang-rust/SKILL.md",
     "../../../skills/languages/lang-c/SKILL.md",
     "../../../skills/languages/lang-cpp/SKILL.md",
-    "../../../skills/languages/lang-bash/SKILL.md"
+    "../../../skills/languages/lang-bash/SKILL.md",
+    "../../../skills/engineering-practices/round-workflow/SKILL.md",
+    "../../../skills/engineering-practices/git-conventional-commits/SKILL.md",
+    "../../../skills/engineering-practices/vcs-repository-management/SKILL.md",
+    "../../../skills/programs/github-cli/SKILL.md"
   ]
 }

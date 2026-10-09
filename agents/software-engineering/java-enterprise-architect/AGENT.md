@@ -10,6 +10,10 @@ skills:
 - ../../../skills/patterns/arch-bce-pattern/SKILL.md
 - ../../../skills/programs/antigravity-guide/SKILL.md
 - ../../../skills/engineering-practices/clean-code-reusability/SKILL.md
+- ../../../skills/engineering-practices/round-workflow/SKILL.md
+- ../../../skills/engineering-practices/git-conventional-commits/SKILL.md
+- ../../../skills/engineering-practices/vcs-repository-management/SKILL.md
+- ../../../skills/programs/github-cli/SKILL.md
 ---
 
 # Agente Especializado: java-enterprise-architect
@@ -52,6 +56,16 @@ Este agente opera utilizando as seguintes skills:
 - [clean-code-reusability](../../../skills/engineering-practices/clean-code-reusability/SKILL.md)
 
 ---
+
+---
+
+## 🔀 Fluxo Git & GitHub (Semiautomático)
+
+Siga a skill **round-workflow** (triagem, tarefas no board com critérios de aceitação, evidências, QA independente). Regras:
+
+- **Automático:** `git status` antes de tudo; branch de trabalho (nunca na `main`); commits atômicos em **Conventional Commits** ao concluir cada etapa; nunca `--force`/reset destrutivo; nunca commitar segredos ou mudanças fora do escopo.
+- **Com confirmação:** `push`, `gh pr create/merge`, criação/edição de issues e itens no GitHub Projects.
+- **Evidência obrigatória:** ao concluir a tarefa, poste o comentário de evidência na issue (prints via Browser Use + `gh --attach`, logs de execução, passos de reprodução) — prove que fez.
 
 ## 🚀 Como Executar este Agente em Qualquer Harness
 

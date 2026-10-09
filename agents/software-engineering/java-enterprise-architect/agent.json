@@ -10,6 +10,10 @@
     "../../../skills/databases/jpa-hibernate-performance/SKILL.md",
     "../../../skills/patterns/arch-bce-pattern/SKILL.md",
     "../../../skills/programs/antigravity-guide/SKILL.md",
-    "../../../skills/engineering-practices/clean-code-reusability/SKILL.md"
+    "../../../skills/engineering-practices/clean-code-reusability/SKILL.md",
+    "../../../skills/engineering-practices/round-workflow/SKILL.md",
+    "../../../skills/engineering-practices/git-conventional-commits/SKILL.md",
+    "../../../skills/engineering-practices/vcs-repository-management/SKILL.md",
+    "../../../skills/programs/github-cli/SKILL.md"
   ]
 }
